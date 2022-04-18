@@ -13,12 +13,12 @@ d - date (specify file times in days)
 
 For example:
 ```bash
-sh delete_files_older.sh /opt/google/chrome/
+test_user@test_user:~/Desktop/Bash scripts/Linux_scripts$ ./delete_files_older.sh -p /home/test_user/Documents/ -d 30
 ```
 
 Output:
 ```
-test_user@test_user:~/Desktop/Bash scripts/Linux_scripts$ ./delete_files_older.sh -p /home/test_user/Documents/ -d 30
+
 Current directory: /home/test_user/Documents/
 Modification time: 30
 Current directory is /home/test_user/Documents/ ...
