@@ -11,14 +11,11 @@ done
 echo "Current directory: $path";
 echo "Modification time: $date";
 
-for FILE in path
+count=0
+echo "Current directory is $path ..."
+sudo find "$path" -type f -mtime +"$date" | while IFS= read -r line
 do
-   count=0
-   echo "Current directory is $path ..."
-   sudo find $path -type f -mtime +$date | while read line
-   do 
-      sudo rm ${line}
-      count=$((count+1))
-      echo "$count - Find file - $line ..."
-   done  
+   sudo rm "$line"
+   count=$((count+1))
+   echo "$count - Find file - $line ..."
 done
